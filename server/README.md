@@ -22,6 +22,9 @@ Install the dependencies using the command npm install <package-name>
 ### Issues and Troubleshooting: 
 - If you face any trouble regarding the nodemon package try to install it globally and run using the command npm install nodemon.
 
+### Testing
+To run and check the working of the routes, use the chrome extension called TALEND or POSTMAN
+
 ### Contact Information: 
 - Name: Avidi Amruthavalli
 - Contact Number : 6303511688
