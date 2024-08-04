@@ -15,10 +15,7 @@ app.use(express.json())
 app.use(bodyParser.json())
 app.use(cookieParser())
 app.use(express.urlencoded({ extended: false }))
-// app.use(cors({
-//     credentials: true,
-//     origin: 'http://localhost:3000'
-// }))
+
 const PORT = 3002
 
 connectDB()
@@ -115,7 +112,7 @@ try {
     .sort({ createdAt: -1 }) // Sort tweets by newest first
     .limit(limit)
 
-    const nextCursor = tweets.length > 0 ? tweets[tweets.length - 1]._id : null;
+    const nextCursor = tweets.length > 0 ? tweets[tweets.length - 1]._id : null; //for the first request cursor params is optional but if we need the next set of records to be displayed, then the value of the nextCursor of the first set of records need to be given for the cursor key in the url
 
     res.json({tweets,nextCursor});
 } catch (e) {
